@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jqerry.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/ladger.css">
+    <link rel="stylesheet" href="css/reports.css">
+
+</head>
+
+<body>
+    <section class="main-frame">
+        <div class="sidebar-frame">
+            <div class="frame-group">
+                <div class="tallyflow-frame">
+                    <a class="TallyFlow">TallyFlow</a>
+                    <img class="frame-child" alt="" src="img/vector-190.svg">
+                </div>
+
+                <nav class="nav-content-frame">
+                    <!-- <div class="nav-component-parent"> -->
+                    <a class="sidebar-navs-links " href="index.html">
+                        <img src="img/management-icon.svg" alt="icon"><span>Dashboard</span>
+                    </a>
+
+                    <a class="sidebar-navs-links" href="onboarding.html">
+                        <img src="img/user-management.svg" alt="icon"><span>Onboarding</span>
+                    </a>
+
+                    <a class="sidebar-navs-links" href="reports.html">
+                        <img src="img/reposrts_bar.svg" alt="icon"><span>Reports</span>
+                    </a>
+
+
+                    <a class="sidebar-navs-links " href="ledger.html">
+                        <img src="img/sidebar_ledger.svg" alt="icon"><span>Ledger</span>
+                    </a>
+
+                    <a class="sidebar-navs-links" href="document.html">
+                        <img src="img/sidebar_document.svg" alt="icon"><span>Document</span>
+                    </a>
+                    <!-- </div> -->
+                </nav>
+            </div>
+        </div>
+        <section class="main-section-component gap">
+            <!-- top section -->
+            <header class="top-section">
+
+                <div class="top-serch-bar">
+                    <img src="img/iconsearch@2x.png " class="abosolute-img" width="20px" height="20px" alt="">
+                    <input type="text" name="search" class="Search" placeholder="Search">
+                    <input type="button" value="Search" class="search-btn ">
+                </div>
+
+                <div class="call-notification">
+                    <div class="call">
+                        <a class="call-us">Call Us:</a>
+                        <a class="call-us1">0000-0000-00</a>
+                    </div>
+                    <img class="call-icon" alt="" src="img/call-icon.svg">
+                    <div class="notifications">
+                        <div class="buttons " id="notification-btn">
+                            <img class="notification-icon" loading="lazy" alt="notification" src="img/notification.svg">
+                        </div>
+                        <div class="buttons">
+                            <img class="notification-icon" loading="lazy" alt="notification" src="img/setting.svg">
+                        </div>
+                        <div class="buttons">
+                            <img class="user-icon" loading="lazy" alt="notification" src="img/user.svg">
+                        </div>
+                        <div class="buttons">
+                            <img class="user-icon" loading="lazy" alt="notification" src="img/help.svg">
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <!-- top section -->
+            <div class="middle-frame-section ">
+                <section class="container-fluid px-0  replace-section">
+                    <div class="bread-crumb px-3 py-2">
+                        <a href="ledger.html" class="#">Home </a>
+                        <div class="notifications rl">
+                            <a href="#" class="ctx exports" id="exports">
+                                <img src="img/exel-export.svg" alt="icon">
+                                <p class="mb-0">Excel Report</p>
+                            </a>
+                            <a href="#" class="ctx print" id="exports">
+                                <img src="img/print.svg" alt="icon">
+                                <p class="mb-0">Print</p>
+                            </a>
+                            <div>
+                                <form action="" method="post">
+                                    <select name="reports-filter" class="reports-filter" id="reports-filter">
+                                        <option value="ALL" selected>ALL</option>
+                                        <option value="Today">Today</option>
+                                        <option value="This Month">This Month</option>
+                                        <option value="This Year">This Year</option>
+                                        <option value="custom" id="custom-selected">custom</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content">
+                        <div class="table-head">
+                            <p class="table-heading">DATE</p>
+                            <p class="table-heading">NAME <img src="img/vector-arrow.svg" alt="icon"></p>
+                            <p class="table-heading">COMPANY NAME</p>
+                            <p class="table-heading">GST NUMBER</p>
+                            <img src="img/three-dot.svg" alt="icon">
+                        </div>
+                        <!-- Repeat file -->
+                        <div class="table-rows">
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <p class="table-detail-data">01/05/2024</p>
+                                <p class="table-detail-data">Cameron Williamson</p>
+                                <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
+                                <p class="table-detail-data">FPK2022658</p>
+                                <div class="three-dots">
+                                    <img src="img/three-dot.svg" alt="icon">
+                                    <div class="popup-menu hide-menu">
+                                        <ul>
+                                            <li>View/Edit</li>
+                                            <li>Generate e-Invoice</li>
+                                            <li>Convert To Return</li>
+                                            <li>Preview As Challan</li>
+                                            <li>Cancel Report</li>
+                                            <li>Delete</li>
+                                            <li>Duplicate</li>
+                                            <li>Print</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Repeat file -->
+                    </div>
+
+                    <!-- <footer class="footer-and-pagination">
+                        <div class="pagination">
+                            <button class="page-btn prev-page">&lt;</button>
+                            <div class="page-numbers"></div>
+                            <button class="page-btn next-page">&gt;</button>
+                        </div>
+
+                    </footer> -->
+                </section>
+
+                <section class="replace-content" style="display: none;">
+                    <div class="bread-crumb border-10">
+                        <a href="reports.html" class="#">Home <span>> list of reports</span></a>
+                        <div class="notifications rl">
+                            <a href="#" class="ctx exports" id="exports">
+                                <img src="img/exel-export.svg" alt="icon">
+                                <p class="mb-0">Excel Report</p>
+                            </a>
+                            <a href="#" class="ctx print" id="exports">
+                                <img src="img/print.svg" alt="icon">
+                                <p class="mb-0">Print</p>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="reposrts-content container-fluid px-3 py-2">
+                        <div class="row">
+                            <div class="col-md-6 col-md-6 col-sm-12">
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper"></i> Business Overview</h4>
+                                    <div class="box-tb">Profit And Loss</div>
+                                    <div class="box-tb">Cash Flow Statement</div>
+                                    <div class="box-tb">Balance Sheet</div>
+                                    <div class="box-tb">Trial Balance</div>
+                                    <div class="movement-equity">
+                                        <div class="box-tb">Movement Of Equity</div>
+                                    </div>
+                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
+                                            class="fa-solid fa-angle-down"></i>More Reports</button>
+                                </div>
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper"></i> Taxes</h4>
+                                    <div class="box-tb">GST Reports</div>
+                                    <div class="box-tb">TDS Reports</div>
+                                </div>
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Payables</h4>
+                                    <div class="box-tb">Vendor Balances</div>
+                                    <div class="box-tb">Vendor Balances summary</div>
+                                    <div class="box-tb">AP Aging Summary</div>
+                                    <div class="box-tb">AP aging details</div>
+                                    <div class="movement-equity">
+                                        <div class="box-tb">Day Book</div>
+                                    </div>
+                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
+                                            class="fa-solid fa-angle-down"></i>More Reports</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-md-6 col-sm-12">
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Sales</h4>
+                                    <div class="box-tb">Sales by Customer</div>
+                                    <div class="box-tb">Sales by item</div>
+                                </div>
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Receivables</h4>
+                                    <div class="box-tb">Customer Balances</div>
+                                    <div class="box-tb">AR aging summary</div>
+                                    <div class="box-tb">AR Aging Details</div>
+                                    <div class="box-tb">Customer balance summary</div>
+                                    <div class="movement-equity">
+                                        <div class="box-tb">Receivable Summary</div>
+                                        <div class="box-tb">Receivable details</div>
+                                    </div>
+                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
+                                            class="fa-solid fa-angle-down"></i>More Reports</button>
+                                </div>
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Banking</h4>
+                                    <div class="box-tb">Total receive</div>
+                                    <div class="box-tb">Total Payment</div>
+                                    <div class="box-tb">balance as per book</div>
+                                    <div class="box-tb">ACurrency</div>
+                                    <div class="movement-equity">
+                                        <div class="box-tb">Reconciliation status</div>
+                                    </div>
+                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
+                                            class="fa-solid fa-angle-down"></i>More Reports</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </section>
+</body>
+
+</html>

@@ -373,7 +373,7 @@ body {
 }
 
 .call-notification {
-    width: 330px;
+    width: 390px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -401,7 +401,7 @@ body {
 .notifications {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     gap: var(--gap-lg);
 }
@@ -930,41 +930,49 @@ body {
     .call-notification {
         width: 200px;
     }
-    .onboarding-row{
-     
+
+    .onboarding-row {
+
         flex-direction: column;
     }
-    .onboarding-clients{
+
+    .onboarding-clients {
         width: 100%;
     }
-    .onboarding-clients p{
+
+    .onboarding-clients p {
 
         margin-bottom: 0px;
     }
-    .chart-header{
+
+    .chart-header {
         flex-direction: column;
         justify-content: start;
         align-items: start;
         margin-bottom: 10px;
     }
-    .recent-report-list{
+
+    .recent-report-list {
         margin-top: 10px;
     }
-    .reposrts-heading{
+
+    .reposrts-heading {
         overflow-x: auto;
         justify-content: space-between;
         gap: 20px;
     }
-    .reports-row-data{
+
+    .reports-row-data {
         gap: 22px;
         overflow-x: auto;
     }
-    .rows-header{
+
+    .rows-header {
         flex-direction: column;
         justify-content: start;
         align-items: start;
     }
-    
+
 
     .call {
         display: none;
@@ -972,14 +980,20 @@ body {
 }
 
 @media screen and (max-width:430px) {
-    .ca-detail .ca-name{
-        font-size: 25px;
+    .ca-detail .ca-name {
+        font-size: 17px;
     }
+
+    .Search {
+        height: 36px;
+    }
+
     .top-section {
         padding: 10px;
     }
-    .search-btn{
-        padding: 10px;
+
+    .search-btn {
+        padding: 7px;
     }
 
     .call-notification {
