@@ -10,8 +10,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/ladger.css">
-    <link rel="stylesheet" href="css/reports.css">
 
 </head>
 
@@ -67,17 +65,59 @@
                     </div>
                     <img class="call-icon" alt="" src="img/call-icon.svg">
                     <div class="notifications">
+                        <div class="buttons" id="help">
+                            <img class="user-icon" loading="lazy" alt="notification" src="img/help.svg">
+                            <div class="help-section" style="display: none;">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-toggle="tab"
+                                            data-target="#home" type="button" role="tab" aria-controls="home"
+                                            aria-selected="true">Notifications</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-toggle="tab"
+                                            data-target="#profile" type="button" role="tab" aria-controls="profile"
+                                            aria-selected="false">Announcements</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                        aria-labelledby="home-tab">...1</div>
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
+                                        aria-labelledby="profile-tab">...2</div>
+
+                                </div>
+                            </div>
+                        </div>
                         <div class="buttons " id="notification-btn">
                             <img class="notification-icon" loading="lazy" alt="notification" src="img/notification.svg">
                         </div>
                         <div class="buttons">
                             <img class="notification-icon" loading="lazy" alt="notification" src="img/setting.svg">
                         </div>
-                        <div class="buttons">
-                            <img class="user-icon" loading="lazy" alt="notification" src="img/user.svg">
-                        </div>
-                        <div class="buttons">
-                            <img class="user-icon" loading="lazy" alt="notification" src="img/help.svg">
+
+                        <div class="buttons profile-btn" id="profile-btn">
+                            <img class="user-icon" loading="lazy" id="profile-toggle" alt="notification"
+                                src="img/user.svg">
+                            <div class="profile-section " id="profile-section" style="display:none;">
+                                <div class="profile-name-content">
+                                    <div>
+                                        <img class="profile-image" src="img/profile-card.png" alt="profile"></img>
+                                    </div>
+                                    <div class="flex-name-id">
+                                        <h4><b>CA Name</b></h4>
+                                        <p>USer ID : <span> CA0001</span></p>
+                                        <p>Email : <span> ca001@gmail.com</span></p>
+                                        <p>Type : <span>ca</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-right text-danger">
+                                    <span><img src="img/logout.svg" alt="logout"></span> Sign Out</a>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                            </div>
                         </div>
 
                     </div>
@@ -85,9 +125,9 @@
             </header>
             <!-- top section -->
             <div class="middle-frame-section ">
-                <section class="container-fluid px-0  replace-section">
+                <section class="container-fluid px-0 replace-section">
                     <div class="bread-crumb px-3 py-2">
-                        <a href="ledger.html" class="#">Home </a>
+                        <a href="ledger.html" class="">Home </a>
                         <div class="notifications rl">
                             <a href="#" class="ctx exports" id="exports">
                                 <img src="img/exel-export.svg" alt="icon">
@@ -120,7 +160,7 @@
                         </div>
                         <!-- Repeat file -->
                         <div class="table-rows">
-                            <div class="table-row">
+                            <div class="table-row" id="first-row">
                                 <p class="table-detail-data">01/05/2024</p>
                                 <p class="table-detail-data">Cameron Williamson</p>
                                 <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>

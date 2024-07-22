@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jqerry.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/global.css" />
+
+</head>
+<style></style>
+
+<body>
+    <section class="main-frame">
+        <div class="sidebar-frame">
+            <div class="frame-group">
+                <div class="tallyflow-frame">
+                    <a class="TallyFlow">TallyFlow</a>
+                    <img class="frame-child" alt="" src="img/vector-190.svg" />
+                </div>
+                <nav class="nav-content-frame">
+                    <!-- <div class="nav-component-parent"> -->
+                    <a class="sidebar-navs-links" href="index.html">
+                        <img src="img/management-icon.svg" alt="icon" /><span>Dashboard</span>
+                    </a>
+                    <a class="sidebar-navs-links active-links" href="onboarding.html">
+                        <img src="img/user-management.svg" alt="icon" /><span>Onboarding</span>
+                    </a>
+                    <a class="sidebar-navs-links" href="reports.html">
+                        <img src="img/reposrts_bar.svg" alt="icon" /><span>Reports</span>
+                    </a>
+                    <a class="sidebar-navs-links" href="ledger.html">
+                        <img src="img/sidebar_ledger.svg" alt="icon" /><span>Ledger</span>
+                    </a>
+                    <a class="sidebar-navs-links" href="document.html">
+                        <img src="img/sidebar_document.svg" alt="icon" /><span>Document</span>
+                    </a>
+                    <!-- </div> -->
+                </nav>
+            </div>
+        </div>
+        <div class="main-section-component gap">
+            <!-- top section -->
+            <header class="top-section">
+                <div class="top-serch-bar">
+                    <img src="img/iconsearch@2x.png " class="abosolute-img" width="20px" height="20px" alt="" />
+                    <input type="text" name="search" class="Search" placeholder="Search" />
+                    <input type="button" value="Search" class="search-btn" />
+                </div>
+                <div class="call-notification">
+                    <div class="call">
+                        <a class="call-us">Call Us:</a>
+                        <a class="call-us1">0000-0000-00</a>
+                    </div>
+                    <img class="call-icon" alt="" src="img/call-icon.svg" />
+                    <div class="notifications">
+                        <div class="buttons" id="notification-btn">
+                            <img class="notification-icon" loading="lazy" alt="notification"
+                                src="img/notification.svg" />
+                        </div>
+                        <div class="buttons">
+                            <img class="notification-icon" loading="lazy" alt="notification" src="img/setting.svg" />
+                        </div>
+                        <div class="buttons profile-btn" id="profile-btn">
+                            <img class="user-icon" loading="lazy" id="profile-toggle" alt="notification"
+                                src="img/user.svg">
+                            <div class="profile-section " id="profile-section" style="display:none;">
+                                <div class="profile-name-content">
+                                    <div>
+                                        <img class="profile-image" src="img/profile-card.png" alt="profile"></img>
+                                    </div>
+                                    <div class="flex-name-id">
+                                        <h4><b>CA Name</b></h4>
+                                        <p>USer ID : <span> CA0001</span></p>
+                                        <p>Email : <span> ca001@gmail.com</span></p>
+                                        <p>Type : <span>ca</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-right text-danger">
+                                    <span><img src="img/logout.svg" alt="logout"></span> Sign Out</a>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- top section -->
+            <div class="middle-frame-section">
+                <div id="replace-onboarding">
+                    <div class="container-fluid px-0 border-10">
+                        <div class="bread-crumb">
+                            <a href="onboarding.html" class="">Use Onboarding > Complete user detail</a>
+                            <div class="notifications rl">
+                                <div class="buttons25" id="buttonsContainer">
+                                    <a href="allclients.html" class="schedule-demo10">All Clients</a>
+                                </div>
+                                <button class="buttons26">
+                                    <div class="schedule-demo11" id="upload">Upload File</div>
+                                    <img class="plus-icon16" alt="icon" src="img/plus.svg" />
+                                </button>
+
+
+                                <!-- Overlay background -->
+                                <div id="overlay" class="overlay" style="display: none;"></div>
+
+                                <!-- Overlay content -->
+                                <div class="upload-frame col-lg-5 mx-auto" style="display: none;" id="overlay-content">
+                                    <div class="upload-frame-header">
+                                        <h3>Select Data</h3><span id="close-overlay">x</span>
+                                    </div>
+                                    <form action="">
+                                        <div class="file-upload-wrapper">
+                                            <div class="file-upload-icon mb-3">
+                                                <img src="img/brose_files.png" alt="icons">
+                                            </div>
+                                            <div class="file-upload-title">Drag your file(s) to start uploading</div>
+                                            <div class="file-upload-divider">OR</div>
+                                            <button class="btn file-upload-browse" id="browse-files-btn">Browse
+                                                files</button>
+                                            <input type="file" id="fileInput" name="files" class="d-none"
+                                                draggable="true">
+                                        </div>
+                                        <div class="file-upload-text">Only support .jpg, .png, .pdf, .svg, and zip files
+                                        </div>
+                                        <div class="flex-parent">
+                                            <button type="button" class="cancel-upload">Cancel</button>
+                                            <input type="button" value="Submit" class="submit mx-0">
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- Overlay background -->
+
+                                <div class="buttons">
+                                    <img class="user-icon" loading="lazy" alt="notification" src="img/help.svg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proceess-onboard row">
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="progress-container">
+                                <ul class="progressbar absolute-progress">
+                                    <div class="progress new-progree-bar">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                                            <span class="sr-only">70% Complete</span>
+                                        </div>
+                                    </div>
+                                    <li class="active" id="step1">
+                                        Step 1<br /><span>Enter Your PAN Card Number</span>
+                                    </li>
+                                    <li id="step2">
+                                        Step 2<br /><span>Results Based On Your GST</span>
+                                    </li>
+                                    <li id="step3">
+                                        Step 3<br />
+                                        <span>
+                                            <p>Upload Your ROC Document</p>
+                                        </span>
+                                        <span>
+                                            <p>Upload Your GSTDocument</p>
+                                        </span>
+                                        <span>
+                                            <p>Upload Your PAN Document</p>
+                                        </span>
+                                        <span>
+                                            <p>Upload Your Other Document</p>
+                                        </span>
+
+                                    </li>
+                                    <li id="step4">
+                                        Step 4<br /><span>upload your Other Document</span>
+                                    </li>
+                                    <li id="step5">
+                                        Step 5<br /><span>upload your Previous Data File</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 py-2">
+                            <div class="content mt-5" id="content">
+                                <div id="content-step1" class="content-box active">
+                                    <div class="content-1 col-lg-10 mx-auto">
+                                        <div class="frame-parent8">
+                                            <div class="user-onboarding-through-ca-parent">
+                                                <div class="user-onboarding-through">
+                                                    User Onboarding Through CA
+                                                </div>
+                                                <h1 class="welcome-to-user">
+                                                    “Welcome to user Onboarding Process...”
+                                                </h1>
+                                                <br />
+                                                <div class="frame-wrapper7">
+                                                    <div class="pan-img">
+                                                        <img src="img/linked-vector-177.svg" class="pan-clippath"
+                                                            alt="image" />
+                                                        <div class="child-23">
+                                                            <span>E</span>
+                                                            <span>n</span>
+                                                            <span>t</span>
+                                                            <span>e</span>
+                                                            <span>r</span>
+                                                            <span>Y</span>
+                                                            <span>o</span>
+                                                            <span>u</span>
+                                                            <span>r</span>
+                                                            <span>P</span>
+                                                            <span>a</span>
+                                                            <span>n</span>
+                                                            <span>C</span>
+                                                            <span>a</span>
+                                                            <span>r</span>
+                                                            <span>d</span>
+                                                            <span>N</span>
+                                                            <span>u</span>
+                                                            <span>m</span>
+                                                            <span>b</span>
+                                                            <span>e</span>
+                                                            <span>r</span>
+                                                        </div>
+                                                    </div>
+                                                    <img src="img/vector-176.svg" class="clippath" alt="image" />
+                                                    <div class="pan-name"></div>
+                                                    <div class="pan-card-detail">
+                                                        <div class="pan-detail">
+                                                            <div class="enter-pan-number-parent">
+                                                                <div class="enter-pan-number">
+                                                                    Enter PAN Number
+                                                                </div>
+                                                                <form action="">
+                                                                    <div class="rectangle-parent6">
+                                                                        <input class="enter-your-pan2"
+                                                                            placeholder="Enter Your PAN Card Number"
+                                                                            type="text" />
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <input type="button" value="Submit" class="submit" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="childd-sibling">
+                                                    Click On Submit Button And Go To The Next Page
+                                                </p>
+                                            </div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content-step2" class="px-2 py-2 content-box">
+                                    <div class="frame-parent-12">
+                                        <div class="row justify-content-between">
+                                            <div class="col-lg-5 my-3 col-md-6 col-sm-12">
+                                                <p class="lable">Your PAN Number</p>
+                                                <input type="text" class="your-pan-number child-number"
+                                                    placeholder="ABCD1204EF" />
+                                            </div>
+                                            <div class="col-lg-5 my-3 col-md-6 col-sm-12">
+                                                <p class="lable">Your GST Number</p>
+                                                <input type="text" class="your-gst-number child-number"
+                                                    placeholder="Your GST Number" />
+                                            </div>
+                                        </div>
+                                        <h1 class="text-23">Results based on your GST</h1>
+                                        <div class="table-frame-12">
+                                            <table class="table table-responsive">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Legal Name of Company</th>
+                                                        <th>Trade Name</th>
+                                                        <th>Effective date of Registration</th>
+                                                        <th>Constitution of Business</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Autogenerated Data</td>
+                                                        <td>Autogenerated Data</td>
+                                                        <td>Autogenerated Data</td>
+                                                        <td>Autogenerated Data</td>
+                                                    </tr>
+                                                </tbody>
+                                                <thead>
+                                                    <tr>
+                                                        <th>GST/UIN Status</th>
+                                                        <th>Taxpayer Type</th>
+                                                        <th>Administrative Office</th>
+                                                        <th>Principal place of Business</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Autogenerated Data</td>
+                                                        <td>Autogenerated Data</td>
+                                                        <td>Autogenerated Data</td>
+                                                        <td>Autogenerated Data</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content-step3" class="content-box">
+                                    <div class="upload-container">
+                                        <div class="upload-text-24">
+                                            <h2>Upload Your Document</h2>
+                                            <p>To continue the application, please upload documents to any required
+                                                section.</p>
+                                        </div>
+                                        <br>
+                                        <div class="upload-section bg-white">
+                                            <div class="colapse-text" data-toggle="collapse"
+                                                data-target="#uploadSection1" aria-expanded="false"
+                                                aria-controls="uploadSection1">
+                                                <h3>Upload your ROC Document</h3>
+                                                <span class="requared" id="status1">Required</span>
+                                                <img src="img/down.svg" class="down" alt="">
+                                            </div>
+                                            <div class="collapse mt-3" id="uploadSection1">
+                                                <div id="roc-upload" class="upload-box" data-label="ROC Document">
+                                                    <span>Upload or drag & drop files here</span>
+                                                </div>
+                                                <div id="fileList1" class="upload-file-data" data-label="ROC Document">
+                                                    <div></div>
+                                                    <div>Document-uploaded</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="upload-section bg-white">
+                                            <div class="colapse-text" data-toggle="collapse"
+                                                data-target="#uploadSection2" aria-expanded="false"
+                                                aria-controls="uploadSection2">
+                                                <h3>Upload your GST Document</h3>
+                                                <span class="requared" id="status2">Required</span>
+                                                <img src="img/down.svg" class="down" alt="">
+                                            </div>
+                                            <div class="collapse mt-3" id="uploadSection2">
+                                                <div id="GST-upload" class="upload-box" data-label="GST Document">
+                                                    <span>Upload or drag & drop files here</span>
+                                                </div>
+                                                <div id="fileList2" class="upload-file-data" data-label="GST Document">
+                                                    <div></div>
+                                                    <div>Document-uploaded</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="upload-section bg-white">
+                                            <div class="colapse-text" data-toggle="collapse"
+                                                data-target="#uploadSection3" aria-expanded="false"
+                                                aria-controls="uploadSection3">
+                                                <h3>Upload your Other Document</h3>
+                                                <span class="requared" id="status3">Required</span>
+                                                <img src="img/down.svg" class="down" alt="">
+                                            </div>
+                                            <div class="collapse mt-3" id="uploadSection3">
+                                                <div id="other-document" class="upload-box" data-label="Other Document">
+                                                    <span>Upload or drag & drop files here</span>
+                                                </div>
+                                                <div id="fileList3" class="upload-file-data"
+                                                    data-label="Other Document">
+                                                    <div></div>
+                                                    <div>Document-uploaded</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="upload-section bg-white">
+                                            <div class="colapse-text" data-toggle="collapse"
+                                                data-target="#uploadSection4" aria-expanded="false"
+                                                aria-controls="uploadSection4">
+                                                <h3>Upload your Additional Document</h3>
+                                                <span class="requared" id="status4">Required</span>
+                                                <img src="img/down.svg" class="down" alt="">
+                                            </div>
+                                            <div class="collapse mt-3" id="uploadSection4">
+                                                <div id="Additional-Document" class="upload-box"
+                                                    data-label="Additional Document">
+                                                    <span>Upload or drag & drop files here</span>
+                                                </div>
+                                                <div id="fileList4" class="upload-file-data"
+                                                    data-label="Additional Document">
+                                                    <div></div>
+                                                    <div>Document-uploaded</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="content-step4" class="content-box">
+                                    <div class="frame-wrapper21 col-lg-10 mx-auto">
+                                        <div class="frame-wrapper21-text">
+                                            <h2>Give Credential</h2>
+                                            <p>To continue the application, fill GST login details and Tax login
+                                                Details.</p>
+                                        </div>
+                                        <form action="" class="form-wrapper-content">
+                                            <div class="gst-login-detail">
+                                                <h4>Enter GST Login Details</h4>
+                                                <input type="text" class="input-child" name="UserId"
+                                                    placeholder="Enter UserID" id="userid">
+                                                <input type="text" class="input-child" name="Userpassword"
+                                                    placeholder="Enter Password" id="Enter Password">
+                                            </div>
+
+                                            <div class="Tax-login-detail">
+                                                <h4>Enter GST Login Details</h4>
+                                                <input type="text" class="input-child" name="UserId"
+                                                    placeholder="Enter UserID" id="userid">
+                                                <input type="text" class="input-child" name="Userpassword"
+                                                    placeholder="Enter Password" id="Enter Password">
+                                            </div>
+                                            <input type="button" value="Submit" class="submit">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="content-step5" class="content-box">
+                                    <div class="frame-wrapper21-text">
+                                        <h2>Upload your previous Data</h2>
+                                        <p>To continue the application, please upload your previous data file.</p>
+                                    </div>
+
+                                    <div class="upload-frame col-lg-10 mx-auto">
+                                        <div class="upload-frame-header">
+                                            <h3>Select Data</h3><span>x</span>
+                                        </div>
+                                        <form action="">
+                                            <div class="file-upload-wrapper" style="">
+                                                <div class="file-upload-icon mb-3">
+                                                    <img src="img/brose_files.png" alt="icons">
+                                                </div>
+                                                <div class="file-upload-title">Drag your file(s) to start uploading
+                                                </div>
+
+                                                <div class="file-upload-divider">OR</div>
+                                                <button class="btn  file-upload-browse" id="browse-files-btn">Browse
+                                                    files</button>
+                                                <input type="file" id="fileInput" name="files" class="d-none"
+                                                    draggable="true">
+                                            </div>
+                                            <div class="file-upload-text">Only support .jpg, .png, .pdf, .svg and zip
+                                                files
+                                            </div>
+                                            <div class="flex-parent">
+                                                <button class="cancel-upload">cancel</button>
+                                                <input type="button" value="Submit" id="upload-submit"
+                                                    class="submit mx-0">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="button d-flex px-3 py-5" style="display: flex; justify-content: flex-end">
+                                    <!-- <button id="prevBtn">Previous</button> -->
+                                    <button id="nextBtn">Next</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="upload-print" id="upload-print">
+                        <div class="col-lg-10 child-32 mx-auto">
+                            <h2>Please wait few seconds ...</h2>
+                            <p>We are collecting your inputs to feed AI on future steps</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                    aria-valuemax="100">0%</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="success-message">
+                        <div class="flex-success">
+                            <h2 class="success-heading">
+                                Congratulation !
+                            </h2>
+                            <h3>We are ready for next step</h3>
+                            <p>We are collecting your inputs to feed AI on future steps</p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <img src="img/succes.svg" alt="success" class="successimg">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <button class="proceed-next" onclick="location.href='allclients.html'">proceed to next
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

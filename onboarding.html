@@ -38,7 +38,7 @@
                     </a>
 
 
-                    <a class="sidebar-navs-links active-links" href="ledger.html">
+                    <a class="sidebar-navs-links" href="ledger.html">
                         <img src="img/sidebar_ledger.svg" alt="icon"><span>Ledger</span>
                     </a>
 
@@ -98,16 +98,23 @@
                 </div>
             </header>
             <!-- top section -->
+
             <div class="middle-frame-section ">
+
                 <div class="container-fluid px-0 border-10">
                     <div class="bread-crumb">
-                        <a href="onboarding.html">Ledger</a>
+                        <a href="onboarding.html" class="">Use Onboarding ></a>
                         <div class="notifications rl">
-
-
+                            <div class="buttons25" id="buttonsContainer">
+                                <a href="allclients.html" class="schedule-demo10">All Clients</a>
+                            </div>
+                            <button class="buttons26">
+                                <div class="schedule-demo11" id="upload">Upload File</div>
+                                <img class="plus-icon16" alt="icon" src="img/plus.svg">
+                            </button>
                             <div class="buttons" id="help">
                                 <img class="user-icon" loading="lazy" alt="notification" src="img/help.svg">
-                                <div class="help-section" style="display: none; left: -230px;">
+                                <div class="help-section" style="display: none; left: -250px;">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="home-tab" data-toggle="tab"
@@ -134,7 +141,57 @@
                 </div>
 
 
+                <!-- Overlay background -->
+                <div id="overlay" class="overlay" style="display: none;"></div>
+
+                <!-- Overlay content -->
+                <div class="upload-frame col-lg-5 mx-auto" style="display: none;" id="overlay-content">
+                    <div class="upload-frame-header">
+                        <h3>Select Data</h3><span id="close-overlay">x</span>
+                    </div>
+                    <form action="">
+                        <div class="file-upload-wrapper">
+                            <div class="file-upload-icon mb-3">
+                                <img src="img/brose_files.png" alt="icons">
+                            </div>
+                            <div class="file-upload-title">Drag your file(s) to start uploading</div>
+                            <div class="file-upload-divider">OR</div>
+                            <button class="btn file-upload-browse" id="browse-files-btn">Browse
+                                files</button>
+                            <input type="file" id="fileInput" name="files" class="d-none" draggable="true">
+                        </div>
+                        <div class="file-upload-text">Only support .jpg, .png, .pdf, .svg, and zip files
+                        </div>
+                        <div class="flex-parent">
+                            <button type="button" class="cancel-upload">Cancel</button>
+                            <input type="button" value="Submit" class="submit mx-0">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Overlay background -->
+                <section class="onboarding ">
+                    <div class="frmae-parent-19 col-lg-7 col-sm-12 col-md-12">
+                        <div class="image-parent">
+                            <img src="img/paragraph-two@2x.png" class="onboarding_img_first" alt="onboarding_img">
+                            <img src="img/frame-427321987.svg" class="onboarding_img_second" alt="onboarding_img">
+                        </div>
+                        <h2>User Onboarding through CA</h2>
+                        <blockquote>"Guiding users through their journey with care, clarity, and efficiency, our
+                            onboarding
+                            process through California's picturesque landscapes ensures a seamless transition into
+                            our
+                            platform."</blockquote>
+                        <button id="New-Onboarding" class="New-Onboarding"><a href="onboarding-process.html">New
+                                Onboarding</a></button>
+                        <p>or</p>
+                        <p> Upload your Excel File for bulk user onboarding. <span style="color: blue;" id="upload-on">
+                                Click here </span></p>
+                    </div>
+                </section>
+
             </div>
+        </div>
 
     </section>
 
