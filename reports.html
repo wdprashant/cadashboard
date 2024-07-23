@@ -124,32 +124,38 @@
                 </div>
             </header>
             <!-- top section -->
-            <div class="middle-frame-section ">
-                <section class="container-fluid px-0 replace-section">
-                    <div class="bread-crumb px-3 py-2">
-                        <a href="ledger.html" class="">Home </a>
-                        <div class="notifications rl">
-                            <a href="#" class="ctx exports" id="exports">
-                                <img src="img/exel-export.svg" alt="icon">
-                                <p class="mb-0">Excel Report</p>
-                            </a>
-                            <a href="#" class="ctx print" id="exports">
-                                <img src="img/print.svg" alt="icon">
-                                <p class="mb-0">Print</p>
-                            </a>
-                            <div>
-                                <form action="" method="post">
-                                    <select name="reports-filter" class="reports-filter" id="reports-filter">
-                                        <option value="ALL" selected>ALL</option>
-                                        <option value="Today">Today</option>
-                                        <option value="This Month">This Month</option>
-                                        <option value="This Year">This Year</option>
-                                        <option value="custom" id="custom-selected">custom</option>
-                                    </select>
-                                </form>
-                            </div>
+
+            <div class="container-fluid px-0 border-10">
+                <div class="bread-crumb px-3 py-2">
+                    <a href="#" class="active-bread-crumb">Home ></a>
+                    <div class="notifications rl">
+                        <a href="#" class="ctx exports" id="exports">
+                            <img src="img/exel-export.svg" alt="icon">
+                            <p class="mb-0">Excel Report</p>
+                        </a>
+                        <a href="#" class="ctx print" id="exports">
+                            <img src="img/print.svg" alt="icon">
+                            <p class="mb-0">Print</p>
+                        </a>
+                        <div>
+                            <form action="" method="post">
+                                <select name="reports-filter" class="reports-filter" id="reports-filter">
+                                    <option value="ALL" selected>ALL</option>
+                                    <option value="Today">Today</option>
+                                    <option value="This Month">This Month</option>
+                                    <option value="This Year">This Year</option>
+                                    <option value="custom" id="custom-selected">custom</option>
+                                </select>
+                            </form>
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+
+            <div class="middle-frame-section ">
+                <section class="container-fluid px-0 replace-section">
                     <div class="table-content">
                         <div class="table-head">
                             <p class="table-heading">DATE</p>
@@ -160,7 +166,7 @@
                         </div>
                         <!-- Repeat file -->
                         <div class="table-rows">
-                            <div class="table-row" id="first-row">
+                            <div class="table-row" id="first-row" onclick="location.href='reports_overview.html'">
                                 <p class="table-detail-data">01/05/2024</p>
                                 <p class="table-detail-data">Cameron Williamson</p>
                                 <p class="table-detail-data">Cameronwilliamson Pvt.Ltd</p>
@@ -467,104 +473,8 @@
                         <!-- Repeat file -->
                     </div>
 
-                    <!-- <footer class="footer-and-pagination">
-                        <div class="pagination">
-                            <button class="page-btn prev-page">&lt;</button>
-                            <div class="page-numbers"></div>
-                            <button class="page-btn next-page">&gt;</button>
-                        </div>
-
-                    </footer> -->
                 </section>
 
-                <section class="replace-content" style="display: none;">
-                    <div class="bread-crumb border-10">
-                        <a href="reports.html" class="#">Home <span>> list of reports</span></a>
-                        <div class="notifications rl">
-                            <a href="#" class="ctx exports" id="exports">
-                                <img src="img/exel-export.svg" alt="icon">
-                                <p class="mb-0">Excel Report</p>
-                            </a>
-                            <a href="#" class="ctx print" id="exports">
-                                <img src="img/print.svg" alt="icon">
-                                <p class="mb-0">Print</p>
-                            </a>
-
-                        </div>
-                    </div>
-                    <div class="reposrts-content container-fluid px-3 py-2">
-                        <div class="row">
-                            <div class="col-md-6 col-md-6 col-sm-12">
-                                <div class="box">
-                                    <h4><i class="fa-regular fa-newspaper"></i> Business Overview</h4>
-                                    <div class="box-tb">Profit And Loss</div>
-                                    <div class="box-tb">Cash Flow Statement</div>
-                                    <div class="box-tb">Balance Sheet</div>
-                                    <div class="box-tb">Trial Balance</div>
-                                    <div class="movement-equity">
-                                        <div class="box-tb">Movement Of Equity</div>
-                                    </div>
-                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
-                                            class="fa-solid fa-angle-down"></i>More Reports</button>
-                                </div>
-
-                                <div class="box">
-                                    <h4><i class="fa-regular fa-newspaper"></i> Taxes</h4>
-                                    <div class="box-tb">GST Reports</div>
-                                    <div class="box-tb">TDS Reports</div>
-                                </div>
-
-                                <div class="box">
-                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Payables</h4>
-                                    <div class="box-tb">Vendor Balances</div>
-                                    <div class="box-tb">Vendor Balances summary</div>
-                                    <div class="box-tb">AP Aging Summary</div>
-                                    <div class="box-tb">AP aging details</div>
-                                    <div class="movement-equity">
-                                        <div class="box-tb">Day Book</div>
-                                    </div>
-                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
-                                            class="fa-solid fa-angle-down"></i>More Reports</button>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-md-6 col-sm-12">
-
-                                <div class="box">
-                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Sales</h4>
-                                    <div class="box-tb">Sales by Customer</div>
-                                    <div class="box-tb">Sales by item</div>
-                                </div>
-
-                                <div class="box">
-                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Receivables</h4>
-                                    <div class="box-tb">Customer Balances</div>
-                                    <div class="box-tb">AR aging summary</div>
-                                    <div class="box-tb">AR Aging Details</div>
-                                    <div class="box-tb">Customer balance summary</div>
-                                    <div class="movement-equity">
-                                        <div class="box-tb">Receivable Summary</div>
-                                        <div class="box-tb">Receivable details</div>
-                                    </div>
-                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
-                                            class="fa-solid fa-angle-down"></i>More Reports</button>
-                                </div>
-
-                                <div class="box">
-                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Banking</h4>
-                                    <div class="box-tb">Total receive</div>
-                                    <div class="box-tb">Total Payment</div>
-                                    <div class="box-tb">balance as per book</div>
-                                    <div class="box-tb">ACurrency</div>
-                                    <div class="movement-equity">
-                                        <div class="box-tb">Reconciliation status</div>
-                                    </div>
-                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
-                                            class="fa-solid fa-angle-down"></i>More Reports</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
 
         </section>

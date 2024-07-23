@@ -344,7 +344,7 @@ p {
     font-family: var(--body-base-medium);
     flex: 1;
     flex-direction: column;
-    /* gap: var(--gap-6xl); */
+
     max-width: calc(100% - 250px);
     font-size: var(--body-base-medium-size);
     color: var(--color-gray-100);
@@ -367,6 +367,7 @@ p {
     position: sticky;
     max-width: 100%;
     gap: var(--gap-xl);
+    height: 66px;
 }
 
 .top-serch-bar {
@@ -429,11 +430,11 @@ p {
 }
 
 .call-notification {
-    width: 390px;
+    /* width: 390px; */
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 40px;
     z-index: 1;
     color: var(--primary-pr11);
@@ -461,7 +462,7 @@ p {
     height: auto;
     background-color: white;
     /* border: 1px solid green; */
-    box-shadow: -4px 0px 12.7px 0px #00000033;
+    /* box-shadow: -4px 0px 12.7px 0px #00000033; */
     border-radius: 4px;
     z-index: 1000;
 }
@@ -566,10 +567,12 @@ p {
 
 .middle-frame-section {
     width: 100%;
-    height: 630px;
-    /* background-color: red; */
+    height: 83vh;
     overflow-y: auto;
     overflow-x: hidden;
+}
+.home-middle-section{
+    height: 90vh;
 }
 
 .section-frame {
@@ -869,17 +872,21 @@ p {
     border-radius: 16px;
     background: #DAFED1;
     color: #1e9800;
+}
 
+.status-completed span {
+    background-color: inherit;
+    background-color: red;
+    border-radius: 50%;
 }
 
 
 .status-pending {
-    padding: 2px 6px;
+    padding: 3px 7px;
     gap: 6px;
     border-radius: 16px;
     background: #ec6c6c4d;
-    color: red;
-
+    color: red
 }
 
 .chart-box {
@@ -889,10 +896,12 @@ p {
     width: 100;
 }
 
-.box {
+.box-t {
     align-self: stretch;
     /* width: 100%; */
+
 }
+
 
 .chart-box {
     width: 100%;
@@ -958,6 +967,24 @@ p {
     border-radius: 6px;
 }
 
+.recent-reports {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: #101828;
+}
+
+.reports-para {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #4E4852;
+}
+
 .recent-report-list .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
     background-color: #F8F7F9 !important;
@@ -979,6 +1006,7 @@ p {
     border-top: 0;
     padding: 16px;
 }
+
 
 .reposrts-row {
     display: flex;
@@ -1258,7 +1286,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 20px;
     align-items: stretch;
 }
 
@@ -1267,7 +1295,7 @@ p {
     justify-content: center;
     align-items: stretch;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     font-size: var(--font-size-13xl);
     color: var(--primary-pr11);
     font-family: var(--font-montserrat);
@@ -2900,6 +2928,26 @@ label {
 
 .bread-crumb a {
     text-decoration: none;
+}
+
+.active-bread-crumb {
+    color: var(--primary-pr11);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.inactive-breadcrumb {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: var(--textcolor-neutraldisable);
 }
 
 /* ladger */

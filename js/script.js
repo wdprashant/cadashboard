@@ -71,12 +71,6 @@ $(document).ready(function() {
 
 
 $(document).ready(function () {
-    $('#first-row').on('click', function () {
-        $('.replace-section').fadeOut(function () {
-            $('.replace-content').fadeIn();
-        });
-    });
-
     $('.three-dots').on('click', function (event) {
         event.stopPropagation();
         $(this).find('.popup-menu').toggleClass('hide-menu');

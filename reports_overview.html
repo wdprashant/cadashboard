@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jqerry.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+
+</head>
+
+<body>
+    <section class="main-frame">
+        <div class="sidebar-frame">
+            <div class="frame-group">
+                <div class="tallyflow-frame">
+                    <a class="TallyFlow">TallyFlow</a>
+                    <img class="frame-child" alt="" src="img/vector-190.svg">
+                </div>
+
+                <nav class="nav-content-frame">
+                    <!-- <div class="nav-component-parent"> -->
+                    <a class="sidebar-navs-links " href="index.html">
+                        <img src="img/management-icon.svg" alt="icon"><span>Dashboard</span>
+                    </a>
+
+                    <a class="sidebar-navs-links" href="onboarding.html">
+                        <img src="img/user-management.svg" alt="icon"><span>Onboarding</span>
+                    </a>
+
+                    <a class="sidebar-navs-links active-links" href="reports.html">
+                        <img src="img/reposrts_bar.svg" alt="icon"><span>Reports</span>
+                    </a>
+
+
+                    <a class="sidebar-navs-links " href="ledger.html">
+                        <img src="img/sidebar_ledger.svg" alt="icon"><span>Ledger</span>
+                    </a>
+
+                    <a class="sidebar-navs-links" href="document.html">
+                        <img src="img/sidebar_document.svg" alt="icon"><span>Document</span>
+                    </a>
+                    <!-- </div> -->
+                </nav>
+            </div>
+        </div>
+        <section class="main-section-component gap">
+            <!-- top section -->
+            <header class="top-section">
+
+                <div class="top-serch-bar">
+                    <img src="img/iconsearch@2x.png " class="abosolute-img" width="20px" height="20px" alt="">
+                    <input type="text" name="search" class="Search" placeholder="Search">
+                    <input type="button" value="Search" class="search-btn ">
+                </div>
+
+                <div class="call-notification">
+                    <div class="call">
+                        <a class="call-us">Call Us:</a>
+                        <a class="call-us1">0000-0000-00</a>
+                    </div>
+                    <img class="call-icon" alt="" src="img/call-icon.svg">
+                    <div class="notifications">
+                        <div class="buttons" id="help">
+                            <img class="user-icon" loading="lazy" alt="notification" src="img/help.svg">
+                            <div class="help-section" style="display: none;">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-toggle="tab"
+                                            data-target="#home" type="button" role="tab" aria-controls="home"
+                                            aria-selected="true">Notifications</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-toggle="tab"
+                                            data-target="#profile" type="button" role="tab" aria-controls="profile"
+                                            aria-selected="false">Announcements</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                        aria-labelledby="home-tab">...1</div>
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
+                                        aria-labelledby="profile-tab">...2</div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons " id="notification-btn">
+                            <img class="notification-icon" loading="lazy" alt="notification" src="img/notification.svg">
+                        </div>
+                        <div class="buttons">
+                            <img class="notification-icon" loading="lazy" alt="notification" src="img/setting.svg">
+                        </div>
+
+                        <div class="buttons profile-btn" id="profile-btn">
+                            <img class="user-icon" loading="lazy" id="profile-toggle" alt="notification"
+                                src="img/user.svg">
+                            <div class="profile-section " id="profile-section" style="display:none;">
+                                <div class="profile-name-content">
+                                    <div>
+                                        <img class="profile-image" src="img/profile-card.png" alt="profile"></img>
+                                    </div>
+                                    <div class="flex-name-id">
+                                        <h4><b>CA Name</b></h4>
+                                        <p>USer ID : <span> CA0001</span></p>
+                                        <p>Email : <span> ca001@gmail.com</span></p>
+                                        <p>Type : <span>ca</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-right text-danger">
+                                    <span><img src="img/logout.svg" alt="logout"></span> Sign Out</a>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                                <div class="profile-box"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <!-- top section -->
+
+            <div class="container-fluid px-0 border-10">
+                <div class="bread-crumb ">
+                    <span><a href="reports.html" class="inactive-breadcrumb">Reports> </a> <a href="#"
+                            class="active-bread-crumb">List of Reports</span></a> </span>
+                    <div class="notifications rl">
+                        <a href="#" class="ctx exports" id="exports">
+                            <img src="img/exel-export.svg" alt="icon">
+                            <p class="mb-0">Excel Report</p>
+                        </a>
+                        <a href="#" class="ctx print" id="exports">
+                            <img src="img/print.svg" alt="icon">
+                            <p class="mb-0">Print</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="middle-frame-section ">
+
+                <section class="replace-contentn container-fluid px-0">
+
+                    <div class="reposrts-content container-fluid px-3 py-2">
+                        <div class="row">
+                            <div class="col-md-6 col-md-6 col-sm-12">
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper"></i> Business Overview</h4>
+                                    <div class="box-tb">Profit And Loss</div>
+                                    <div class="box-tb">Cash Flow Statement</div>
+                                    <div class="box-tb">Balance Sheet</div>
+                                    <div class="box-tb">Trial Balance</div>
+                                    <div class="movement-equity">
+                                        <div class="box-tb">Movement Of Equity</div>
+                                    </div>
+                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
+                                            class="fa-solid fa-angle-down"></i>More Reports</button>
+                                </div>
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper"></i> Taxes</h4>
+                                    <div class="box-tb">GST Reports</div>
+                                    <div class="box-tb">TDS Reports</div>
+                                </div>
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Payables</h4>
+                                    <div class="box-tb">Vendor Balances</div>
+                                    <div class="box-tb">Vendor Balances summary</div>
+                                    <div class="box-tb">AP Aging Summary</div>
+                                    <div class="box-tb">AP aging details</div>
+                                    <div class="movement-equity">
+                                        <div class="box-tb">Day Book</div>
+                                    </div>
+                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
+                                            class="fa-solid fa-angle-down"></i>More Reports</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-md-6 col-sm-12">
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Sales</h4>
+                                    <div class="box-tb">Sales by Customer</div>
+                                    <div class="box-tb">Sales by item</div>
+                                </div>
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Receivables</h4>
+                                    <div class="box-tb">Customer Balances</div>
+                                    <div class="box-tb">AR aging summary</div>
+                                    <div class="box-tb">AR Aging Details</div>
+                                    <div class="box-tb">Customer balance summary</div>
+                                    <div class="movement-equity">
+                                        <div class="box-tb">Receivable Summary</div>
+                                        <div class="box-tb">Receivable details</div>
+                                    </div>
+                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
+                                            class="fa-solid fa-angle-down"></i>More Reports</button>
+                                </div>
+
+                                <div class="box">
+                                    <h4><i class="fa-regular fa-newspaper mx-2"></i>Banking</h4>
+                                    <div class="box-tb">Total receive</div>
+                                    <div class="box-tb">Total Payment</div>
+                                    <div class="box-tb">balance as per book</div>
+                                    <div class="box-tb">ACurrency</div>
+                                    <div class="movement-equity">
+                                        <div class="box-tb">Reconciliation status</div>
+                                    </div>
+                                    <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"><i
+                                            class="fa-solid fa-angle-down"></i>More Reports</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </section>
+</body>
+
+</html>
